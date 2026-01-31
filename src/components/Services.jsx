@@ -37,8 +37,8 @@ const Services = () => {
                         const cards = entry.target.querySelectorAll('.service-card');
                         cards.forEach((card, index) => {
                             setTimeout(() => {
-                                card.classList.add('visible');
-                            }, index * 150);
+                                card.classList.add('slide-in-up', `stagger-${index + 1}`);
+                            }, index * 100);
                         });
                     }
                 });
@@ -67,7 +67,7 @@ const Services = () => {
 
                 <div className="services-grid">
                     {servicesData.map((service) => (
-                        <div key={service.id} className="service-card glass-card">
+                        <div key={service.id} className="service-card scroll-animate">
                             <div className="service-icon">{service.icon}</div>
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-description">{service.description}</p>

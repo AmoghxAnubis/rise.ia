@@ -10,38 +10,66 @@ const Hero = () => {
 
     return (
         <section id="hero" className="hero">
-            <div className="hero-background">
-                <div className="gradient-orb orb-1"></div>
-                <div className="gradient-orb orb-2"></div>
-                <div className="gradient-orb orb-3"></div>
-            </div>
+            <div className="hero-grid-bg"></div>
 
             <div className="container hero-container">
                 <div className={`hero-content ${isVisible ? 'fade-in-up' : ''}`}>
+                    <div className="hero-label mono">
+                        <span className="label-bracket">[</span>
+                        <span className="label-text">DESIGN_AGENCY</span>
+                        <span className="label-bracket">]</span>
+                    </div>
+
                     <h1 className="hero-title">
-                        Design & Development
+                        RISE.IA
                         <br />
-                        <span className="gradient-text">Elevated</span>
+                        <span className="gradient-text">DESIGN & DEV</span>
                     </h1>
-                    <p className="hero-subtitle">
-                        We craft premium digital experiences that captivate, engage, and convert.
-                        From stunning web development to powerful branding and cinematic motion design.
-                    </p>
+
+                    <div className="terminal-box">
+                        <div className="terminal-header">
+                            <span className="mono">~/projects/rise.ia</span>
+                        </div>
+                        <div className="terminal-content">
+                            <p className="mono">
+                                <span className="terminal-prompt">$</span> We craft premium digital experiences
+                            </p>
+                            <p className="mono">
+                                <span className="terminal-prompt">$</span> Web development | Marketing | Motion design
+                            </p>
+                        </div>
+                    </div>
+
                     <div className="hero-cta">
                         <button className="btn btn-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                            Start Your Project
+                            Start Project
                         </button>
                         <button className="btn btn-secondary" onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}>
-                            View Our Work
+                            View Work
                         </button>
+                    </div>
+
+                    <div className="hero-stats">
+                        <div className="stat-item">
+                            <span className="stat-number mono">100+</span>
+                            <span className="stat-label mono">Projects</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number mono">50+</span>
+                            <span className="stat-label mono">Clients</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number mono">24/7</span>
+                            <span className="stat-label mono">Support</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="scroll-indicator">
-                    <div className="scroll-mouse">
-                        <div className="scroll-wheel"></div>
-                    </div>
-                    <span>Scroll to explore</span>
+                <div className="hero-accent">
+                    <div className="accent-block accent-purple"></div>
+                    <div className="accent-block accent-magenta"></div>
                 </div>
             </div>
         </section>

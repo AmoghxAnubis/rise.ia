@@ -8,6 +8,7 @@ import './App.css'
 function App() {
   return (
     <div className="app">
+      <div className="grid-lines"></div>
       <Navbar />
       <Hero />
       <Services />

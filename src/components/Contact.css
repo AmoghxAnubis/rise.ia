@@ -1,9 +1,9 @@
 .contact {
-    background: linear-gradient(180deg, var(--color-dark-gray) 0%, var(--color-black) 100%);
+    background: var(--color-black);
 }
 
 .contact-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: var(--spacing-lg);
 }
 
@@ -21,51 +21,77 @@
 }
 
 .info-card {
-    text-align: center;
+    text-align: left;
     padding: var(--spacing-md);
-    transition: var(--transition-normal);
+    transition: var(--transition-fast);
+    border: 2px solid var(--color-border);
+    background: var(--color-black);
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-brutal);
+    background: var(--color-dark-gray);
 }
 
 .info-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: var(--spacing-sm);
+    background: var(--color-purple);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-purple);
 }
 
 .info-card h3 {
     font-size: var(--font-size-lg);
     margin-bottom: 0.5rem;
     color: var(--color-white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
 }
 
 .info-card p {
     font-size: var(--font-size-sm);
     color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-mono);
 }
 
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 0;
     margin-top: 0.5rem;
+    border: 2px solid var(--color-border);
+    width: fit-content;
 }
 
 .social-link {
-    font-size: var(--font-size-sm);
-    color: var(--color-purple);
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
     transition: var(--transition-fast);
+    padding: 0.5rem 1rem;
+    border-right: 2px solid var(--color-border);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.social-link:last-child {
+    border-right: none;
 }
 
 .social-link:hover {
-    color: var(--color-magenta);
-    transform: translateY(-2px);
+    background: var(--color-purple);
+    color: var(--color-white);
 }
 
 .contact-form {
     padding: var(--spacing-lg);
+    border: 2px solid var(--color-border);
+    background: var(--color-black);
 }
 
 .form-group {
@@ -75,9 +101,12 @@
 .form-group label {
     display: block;
     font-size: var(--font-size-sm);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--color-white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .form-group input,
@@ -85,12 +114,11 @@
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
+    background: var(--color-black);
+    border: 2px solid var(--color-border);
     color: var(--color-white);
     font-size: var(--font-size-sm);
-    font-family: var(--font-family);
+    font-family: var(--font-mono);
     transition: var(--transition-fast);
 }
 
@@ -99,8 +127,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-purple);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    background: var(--color-dark-gray);
 }
 
 .form-group textarea {
@@ -111,14 +138,14 @@
 .submit-btn {
     width: 100%;
     margin-top: var(--spacing-sm);
-    font-size: var(--font-size-md);
-    padding: 1.25rem;
+    font-size: var(--font-size-sm);
+    padding: 1rem;
 }
 
 .footer {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-lg) 0;
-    border-top: 1px solid var(--glass-border);
+    border-top: 2px solid var(--color-border);
 }
 
 .footer-content {
@@ -130,16 +157,20 @@
 .footer-brand h3 {
     font-size: var(--font-size-xl);
     margin-bottom: 0.25rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
 }
 
 .footer-brand p {
     font-size: var(--font-size-sm);
     color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-mono);
 }
 
 .footer-copyright p {
     font-size: var(--font-size-sm);
     color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-mono);
 }
 
 @media (max-width: 1024px) {
@@ -166,5 +197,13 @@
 
     .info-card {
         padding: var(--spacing-sm);
+    }
+
+    .social-links {
+        width: 100%;
+    }
+
+    .social-link {
+        flex: 1;
     }
 }

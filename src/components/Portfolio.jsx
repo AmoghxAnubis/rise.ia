@@ -64,8 +64,8 @@ const Portfolio = () => {
                         const items = entry.target.querySelectorAll('.portfolio-item');
                         items.forEach((item, index) => {
                             setTimeout(() => {
-                                item.classList.add('visible');
-                            }, index * 100);
+                                item.classList.add('glitch-in', `stagger-${(index % 6) + 1}`);
+                            }, index * 80);
                         });
                     }
                 });
@@ -106,7 +106,7 @@ const Portfolio = () => {
 
                 <div className="portfolio-grid">
                     {filteredProjects.map((project) => (
-                        <div key={project.id} className={`portfolio-item glass-card ${project.color}`}>
+                        <div key={project.id} className={`portfolio-item scroll-animate ${project.color}`}>
                             <div className="portfolio-content">
                                 <span className="portfolio-category">{project.category}</span>
                                 <h3 className="portfolio-title">{project.title}</h3>
