@@ -41,7 +41,11 @@ const Contact = () => {
                         <div className="info-card glass-card">
                             <div className="info-icon">📧</div>
                             <h3>Email Us</h3>
-                            <p>hello@rise.ia</p>
+                            <p>
+                                <a href="mailto:rise.iaservices@gmail.com" style={{ color: 'var(--color-purple)', textDecoration: 'none' }}>
+                                    rise.iaservices@gmail.com
+                                </a>
+                            </p>
                         </div>
 
                         <div className="info-card glass-card">
