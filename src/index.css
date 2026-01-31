@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette - Brutalist */
-  --color-purple: #8B5CF6;
-  --color-magenta: #EC4899;
+  /* Color Palette - Brutalist (Dark Purple & Dark Magenta) */
+  --color-purple: #6B21A8;
+  --color-magenta: #BE185D;
   --color-black: #000000;
   --color-dark-gray: #0A0A0A;
   --color-medium-gray: #1A1A1A;
@@ -40,10 +40,10 @@
   --font-size-2xl: 3rem;
   --font-size-3xl: 4.5rem;
 
-  /* Transitions - Instant/Harsh */
-  --transition-fast: 0.1s ease;
-  --transition-normal: 0.15s ease;
-  --transition-slow: 0.2s ease;
+  /* Transitions - Smooth Ease-In-Out */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
 
   /* Shadows - Harsh */
   --shadow-sm: 4px 4px 0 rgba(0, 0, 0, 0.3);
@@ -67,7 +67,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background: radial-gradient(ellipse at top, #1a0a2e 0%, #0a0a0a 50%, #000000 100%);
+  background: radial-gradient(ellipse at top, #2d1b4e 0%, #0a0a0a 50%, #000000 100%);
   background-attachment: fixed;
   color: var(--color-white);
   line-height: 1.6;
@@ -351,12 +351,12 @@ a {
   background: var(--gradient-primary);
   z-index: 9999;
   transform-origin: left;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s ease-out;
 }
 
 /* Parallax Elements */
 .parallax {
-  transition: transform 0.1s ease-out;
+  transition: transform 0.3s ease-out;
   will-change: transform;
 }
 
@@ -514,31 +514,31 @@ a {
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.4s ease forwards;
+  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .fade-in {
-  animation: fadeIn 0.4s ease forwards;
+  animation: fadeIn 0.6s ease-in-out forwards;
 }
 
 .slide-in-left {
-  animation: slideInLeft 0.4s ease forwards;
+  animation: slideInLeft 0.6s ease-in-out forwards;
 }
 
 .slide-in-right {
-  animation: slideInRight 0.4s ease forwards;
+  animation: slideInRight 0.6s ease-in-out forwards;
 }
 
 .slide-in-up {
-  animation: slideInUp 0.4s ease forwards;
+  animation: slideInUp 0.6s ease-in-out forwards;
 }
 
 .scale-in {
-  animation: scaleIn 0.3s ease forwards;
+  animation: scaleIn 0.5s ease-in-out forwards;
 }
 
 .glitch-in {
-  animation: glitchIn 0.5s ease forwards;
+  animation: glitchIn 0.7s ease-in-out forwards;
 }
 
 .float {
