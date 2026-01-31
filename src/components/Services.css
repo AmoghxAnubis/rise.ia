@@ -1,5 +1,5 @@
 .services {
-    background: var(--color-black);
+    background: transparent;
     position: relative;
 }
 
@@ -50,7 +50,7 @@
     font-size: 3rem;
     margin-bottom: var(--spacing-sm);
     display: inline-block;
-    transition: none;
+    transition: var(--transition-fast);
     background: var(--color-purple);
     width: 80px;
     height: 80px;
@@ -108,6 +108,7 @@
     height: 8px;
     background: var(--color-purple);
     flex-shrink: 0;
+    transition: var(--transition-fast);
 }
 
 .service-hover-gradient {
@@ -116,8 +117,24 @@
 
 .service-card:hover {
     background: var(--color-dark-gray);
-    transform: translate(-4px, -4px);
-    box-shadow: var(--shadow-brutal);
+    transform: translate(-6px, -6px);
+    box-shadow: 8px 8px 0 var(--color-purple);
+    border-color: var(--color-purple);
+}
+
+.service-card:hover .service-icon {
+    background: var(--color-magenta);
+    border-color: var(--color-magenta);
+    transform: rotate(5deg) scale(1.1);
+}
+
+.service-card:hover .service-title {
+    color: var(--color-magenta);
+}
+
+.service-card:hover .feature-dot {
+    background: var(--color-magenta);
+    transform: scale(1.5);
 }
 
 @media (max-width: 768px) {

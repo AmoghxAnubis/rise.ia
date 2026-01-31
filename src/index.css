@@ -67,7 +67,8 @@ html {
 
 body {
   font-family: var(--font-family);
-  background: var(--color-black);
+  background: radial-gradient(ellipse at top, #1a0a2e 0%, #0a0a0a 50%, #000000 100%);
+  background-attachment: fixed;
   color: var(--color-white);
   line-height: 1.6;
   overflow-x: hidden;
@@ -297,6 +298,68 @@ a {
   box-shadow: var(--shadow-brutal);
 }
 
+/* Enhanced Hover Effects */
+.hover-lift {
+  transition: var(--transition-fast);
+}
+
+.hover-lift:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 8px 8px 0 var(--color-purple);
+}
+
+.hover-scale {
+  transition: var(--transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-border-shift {
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.hover-border-shift::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--color-magenta);
+  opacity: 0;
+  transition: var(--transition-fast);
+  pointer-events: none;
+}
+
+.hover-border-shift:hover::after {
+  opacity: 1;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  z-index: 9999;
+  transform-origin: left;
+  transition: transform 0.1s ease;
+}
+
+/* Parallax Elements */
+.parallax {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
 /* Animations - Brutalist */
 @keyframes fadeInUp {
   from {
@@ -416,6 +479,28 @@ a {
 
   50% {
     opacity: 0.5;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 75%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 25%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 

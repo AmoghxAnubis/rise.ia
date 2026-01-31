@@ -6,7 +6,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 80px;
-    background: var(--color-black);
+    background: transparent;
 }
 
 .hero-grid-bg {

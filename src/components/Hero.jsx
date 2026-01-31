@@ -66,11 +66,6 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="hero-accent">
-                    <div className="accent-block accent-purple"></div>
-                    <div className="accent-block accent-magenta"></div>
-                </div>
             </div>
         </section>
     );
