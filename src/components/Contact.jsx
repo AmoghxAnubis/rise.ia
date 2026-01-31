@@ -59,8 +59,8 @@ const Contact = () => {
                             <h3>Follow Us</h3>
                             <div className="social-links">
                                 <a href="#" className="social-link">Twitter</a>
-                                <a href="#" className="social-link">LinkedIn</a>
-                                <a href="#" className="social-link">Instagram</a>
+                                <a href="https://www.linkedin.com/in/rise-ia-4509ab3a9" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                                <a href="https://www.instagram.com/rise.iaservices?igsh=MXBtOXNzbmFjazBweQ==" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</a>
                             </div>
                         </div>
                     </div>
