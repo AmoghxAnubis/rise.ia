@@ -133,7 +133,7 @@ const Contact = () => {
                 <div className="container">
                     <div className="footer-content">
                         <div className="footer-brand">
-                            <h3 className="gradient-text">rise.ia</h3>
+                            <img src="/logo.png" alt="rise.ia" className="footer-logo" />
                             <p>Elevating digital experiences</p>
                         </div>
                         <div className="footer-copyright">

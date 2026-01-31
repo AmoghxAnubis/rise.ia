@@ -161,6 +161,12 @@
     text-transform: uppercase;
 }
 
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 0.5rem;
+}
+
 .footer-brand p {
     font-size: var(--font-size-sm);
     color: rgba(255, 255, 255, 0.6);

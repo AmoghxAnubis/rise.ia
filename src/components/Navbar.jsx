@@ -25,8 +25,8 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
-                <div className="navbar-logo">
-                    <span className="gradient-text">rise.ia</span>
+                <div className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    <img src="/logo.png" alt="rise.ia" className="logo-image" />
                 </div>
 
                 <div className={`navbar-menu ${mobileMenuOpen ? 'active' : ''}`}>
