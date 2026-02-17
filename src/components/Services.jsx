@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import './Services.css';
+import RocketIcon from './icons/RocketIcon';
+import SparklesIcon from './icons/SparklesIcon';
+import ClapperIcon from './icons/ClapperIcon';
 
 const servicesData = [
     {
@@ -7,21 +10,21 @@ const servicesData = [
         title: 'Web Development',
         description: 'Custom websites and web applications built with cutting-edge technologies. From responsive landing pages to complex enterprise solutions.',
         features: ['React & Next.js', 'E-commerce', 'Progressive Web Apps', 'API Integration'],
-        icon: '🚀'
+        icon: RocketIcon
     },
     {
         id: 2,
         title: 'Marketing & Branding',
         description: 'Strategic brand identity and marketing campaigns that resonate with your audience and drive measurable results.',
         features: ['Brand Strategy', 'Digital Marketing', 'Social Media', 'Content Creation'],
-        icon: '✨'
+        icon: SparklesIcon
     },
     {
         id: 3,
         title: 'Motion & Media',
         description: 'Cinematic video editing and motion design that brings your story to life with stunning visual effects and animations.',
         features: ['Video Editing', 'Motion Graphics', '3D Animation', 'Visual Effects'],
-        icon: '🎬'
+        icon: ClapperIcon
     }
 ];
 
@@ -66,22 +69,27 @@ const Services = () => {
                 </div>
 
                 <div className="services-grid">
-                    {servicesData.map((service) => (
-                        <div key={service.id} className="service-card scroll-animate">
-                            <div className="service-icon">{service.icon}</div>
-                            <h3 className="service-title">{service.title}</h3>
-                            <p className="service-description">{service.description}</p>
-                            <ul className="service-features">
-                                {service.features.map((feature, index) => (
-                                    <li key={index}>
-                                        <span className="feature-dot"></span>
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="service-hover-gradient"></div>
-                        </div>
-                    ))}
+                    {servicesData.map((service) => {
+                        const IconComponent = service.icon;
+                        return (
+                            <div key={service.id} className="service-card scroll-animate">
+                                <div className="service-icon">
+                                    <IconComponent />
+                                </div>
+                                <h3 className="service-title">{service.title}</h3>
+                                <p className="service-description">{service.description}</p>
+                                <ul className="service-features">
+                                    {service.features.map((feature, index) => (
+                                        <li key={index}>
+                                            <span className="feature-dot"></span>
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="service-hover-gradient"></div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

@@ -16,8 +16,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(139, 92, 246, 0.1) 99px, rgba(139, 92, 246, 0.1) 100px),
-        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(139, 92, 246, 0.1) 99px, rgba(139, 92, 246, 0.1) 100px);
+        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(220, 20, 60, 0.1) 99px, rgba(220, 20, 60, 0.1) 100px),
+        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(220, 20, 60, 0.1) 99px, rgba(220, 20, 60, 0.1) 100px);
     opacity: 0.3;
     z-index: 0;
 }
